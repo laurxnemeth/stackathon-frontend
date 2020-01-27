@@ -14,6 +14,7 @@ const [excerpt, setExcerpt] = useState("") // final excerpt that I show the user
 const [userInput, setUserInput] = useState({}) // what the user gives me
 
 async function fetchData(){
+
   const res = await axios(SERVER_PATH + "/api/madlibs")
   setGameData(res)
 }
@@ -26,6 +27,7 @@ async function fetchData(){
 //on click, toggle true
 //inside of the fetch data useEffect, only fetch data if toggle is true
 //then, build a form with the fields received from the backend
+//font playfair display
 
     return (
     <div className="App">
