@@ -14,13 +14,14 @@ const [excerpt, setExcerpt] = useState("") // final excerpt that I show the user
 const [userInput, setUserInput] = useState({}) // what the user gives me
 
 async function fetchData(){
-
   const res = await axios(SERVER_PATH + "/api/madlibs")
   setGameData(res)
 }
 
   useEffect(() => {
-    fetchData();
+    if(game === true){
+      fetchData();
+    }
   }, []);
 
 //make button to toggle
@@ -32,14 +33,17 @@ async function fetchData(){
     return (
 			<div className="App">
 				<header className="App-header">
-					<a
-						className="App-link"
-						href="https://reactjs.org"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<img src={start} className="App-logo" alt="start game" />
-					</a>
+					<button onClick={() => toggle(true)}>
+						<img
+							src={start}
+							className="App-logo"
+							alt="start game"
+							data-testid="startGame"
+						/>
+					</button>
+					<div>
+						<p>{gameData.data}</p>
+					</div>
 				</header>
 			</div>
 		);
