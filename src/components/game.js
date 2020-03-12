@@ -4,22 +4,19 @@ import axios from 'axios'
 const SERVER_PATH = 'http://localhost:2020'
 
 function Game(props) {
-  const [gameData, setGameData] = useState('') //actual game
-
-  async function fetchData() {
-    const res = await axios(SERVER_PATH + '/api/madlibs')
-    setGameData(res)
-  }
-
-  function getWordTypes() {}
+  const [game, setGame] = useState({})
 
   useEffect(() => {
+    async function fetchData() {
+      const res = await axios(SERVER_PATH + '/api/madlibs')
+      setGame(res)
+    }
     fetchData()
   }, [])
 
   return (
     <div>
-      <h1>{gameData.data}</h1>
+      {game.data ? <h1>{game.data.gameExcerpt}</h1> : <h1>Loading...</h1>}
     </div>
   )
 }
