@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { TextField, Button } from '@material-ui/core'
 import useForm from './customHooks'
+import { Redirect } from 'react-router'
 
 function Form(props) {
   const formInput = data => {
-    console.log('inputs', data)
+    console.log(data)
+    return <Redirect to="/results" />
   }
+
   const { inputs, handleInputChange, handleSubmit } = useForm(formInput)
 
   const wordTypes = props.game.data.wordTypes
