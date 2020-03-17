@@ -1,24 +1,34 @@
 import React, { useState, useEffect } from 'react'
-import { TextField } from '@material-ui/core'
+import { TextField, Button } from '@material-ui/core'
+import useForm from './customHooks'
 
 function Form(props) {
+  const formInput = data => {
+    console.log('inputs', data)
+  }
+  const { inputs, handleInputChange, handleSubmit } = useForm(formInput)
+
   const wordTypes = props.game.data.wordTypes
   const wordTypeArr = objArr(wordTypes)
 
   return (
     <div>
-      {console.log(wordTypeArr)}
-      <form noValidate autoComplete="off">
+      <form noValidate autoComplete="off" onSubmit={handleSubmit}>
         {wordTypeArr.map((e, idx) => {
           return (
             <TextField
               key={idx}
-              id="outlined-basic"
               label={e}
+              name={e + idx}
               variant="outlined"
+              value={inputs.e}
+              onChange={handleInputChange}
             />
           )
         })}
+        <Button variant="contained" type="submit">
+          See Results!
+        </Button>
       </form>
     </div>
   )
