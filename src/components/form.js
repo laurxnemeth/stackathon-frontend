@@ -11,12 +11,12 @@ function Form(props) {
   const { inputs, handleInputChange, handleSubmit } = useForm(setForm)
 
   const wordTypes = props.game.data.wordTypes
+  const excerpt = props.game.data.gameExcerpt
   const wordTypeArr = objArr(wordTypes)
 
   if (!Object.keys(form).length) {
     return (
       <div>
-        {console.log(form)}
         <form noValidate autoComplete="off" onSubmit={handleSubmit}>
           {wordTypeArr.map((e, idx) => {
             return (
@@ -41,7 +41,8 @@ function Form(props) {
       <Redirect
         to={{
           pathname: '/results',
-          state: form,
+          form: form,
+          excerpt: excerpt,
         }}
       />
     )
