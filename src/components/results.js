@@ -2,7 +2,6 @@ import React from 'react'
 import { Redirect } from 'react-router'
 
 function Results(props) {
-  console.log(props)
   const excerpt = props.location.excerpt
   const form = props.location.form
 
@@ -23,10 +22,12 @@ export default Results
 const result = (obj, str) => {
   const arr = str.split(/ |\n/)
   const regex = /[A-Z].*[A-Z]/
+  console.log('ARR:', arr)
   for (let i = 0; i < arr.length; i++) {
     if (regex.test(arr[i])) {
       for (let key in obj) {
-        if (key.toUpperCase().includes(arr[i]) && obj[key] !== '') {
+        const noSpaces = key.replace(' ', '')
+        if (noSpaces.toUpperCase().includes(arr[i]) && obj[key] !== '') {
           arr[i] = obj[key]
           obj[key] = ''
         }
