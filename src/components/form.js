@@ -1,40 +1,51 @@
-import React, { useState, useEffect } from 'react'
 import { TextField, Button } from '@material-ui/core'
 import useForm from './customHooks'
 import { Redirect } from 'react-router'
+import React, { useState, useEffect } from 'react'
+
+//REMINDER: this form already has the game excerpt
 
 function Form(props) {
-  const formInput = data => {
-    console.log(data)
-    return <Redirect to="/results" />
-  }
+  const [form, setForm] = useState({})
 
-  const { inputs, handleInputChange, handleSubmit } = useForm(formInput)
+  const { inputs, handleInputChange, handleSubmit } = useForm(setForm)
 
   const wordTypes = props.game.data.wordTypes
   const wordTypeArr = objArr(wordTypes)
 
-  return (
-    <div>
-      <form noValidate autoComplete="off" onSubmit={handleSubmit}>
-        {wordTypeArr.map((e, idx) => {
-          return (
-            <TextField
-              key={idx}
-              label={e}
-              name={e + idx}
-              variant="outlined"
-              value={inputs.e}
-              onChange={handleInputChange}
-            />
-          )
-        })}
-        <Button variant="contained" type="submit">
-          See Results!
-        </Button>
-      </form>
-    </div>
-  )
+  if (!Object.keys(form).length) {
+    return (
+      <div>
+        {console.log(form)}
+        <form noValidate autoComplete="off" onSubmit={handleSubmit}>
+          {wordTypeArr.map((e, idx) => {
+            return (
+              <TextField
+                key={idx}
+                label={e}
+                name={e + idx}
+                variant="outlined"
+                value={inputs.e}
+                onChange={handleInputChange}
+              />
+            )
+          })}
+          <Button variant="contained" type="submit">
+            See Results!
+          </Button>
+        </form>
+      </div>
+    )
+  } else {
+    return (
+      <Redirect
+        to={{
+          pathname: '/results',
+          state: form,
+        }}
+      />
+    )
+  }
 }
 
 export default Form
