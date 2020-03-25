@@ -28,7 +28,7 @@ const result = (obj, str) => {
       for (let key in obj) {
         const noSpaces = key.replace(' ', '')
         if (noSpaces.toUpperCase().includes(arr[i]) && obj[key] !== '') {
-          arr[i] = obj[key]
+          arr[i] = obj[key].toUpperCase()
           obj[key] = ''
         }
       }
