@@ -6,11 +6,6 @@ import { Home } from './components'
 import './App.css'
 
 function App(props) {
-  // const [gameData, setGameData] = useState({ wordType: {}, excerpt: ""}); //actual game
-  // const [game, toggle] = useState(false); //on or off
-  // const [excerpt, setExcerpt] = useState("") // final excerpt that I show the user
-  // const [userInput, setUserInput] = useState({}) // what the user gives me
-
   return (
     <div className="App">
       <Routes />

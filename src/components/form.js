@@ -3,8 +3,6 @@ import useForm from './customHooks'
 import { Redirect } from 'react-router'
 import React, { useState, useEffect } from 'react'
 
-//REMINDER: this form already has the game excerpt
-
 function Form(props) {
   const [form, setForm] = useState({})
 
