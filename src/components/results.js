@@ -1,9 +1,14 @@
 import React from 'react'
 import { Redirect } from 'react-router'
+import { Button } from 'grommet'
 
 function Results(props) {
   const excerpt = props.location.excerpt
   const form = props.location.form
+
+  const reload = () => {
+    window.location.reload(false)
+  }
 
   if (!props.location.excerpt && !props.location.excerpt) {
     return <Redirect to={'/game'} />
@@ -11,6 +16,13 @@ function Results(props) {
     return (
       <div>
         <p id="result">{result(form, excerpt)}</p>
+        <Button
+          className="button"
+          primary
+          color="#ECBDBD"
+          onClick={reload}
+          label="Play again?"
+        />
       </div>
     )
   }
