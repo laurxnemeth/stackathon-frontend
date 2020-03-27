@@ -10,7 +10,7 @@ function Results(props) {
   } else {
     return (
       <div>
-        <h1>{result(form, excerpt)}</h1>
+        <p id="result">{result(form, excerpt)}</p>
       </div>
     )
   }

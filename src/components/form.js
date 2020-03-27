@@ -1,9 +1,10 @@
-import { TextField, Button } from '@material-ui/core'
+//import { TextField, Button } from '@material-ui/core'
 import useForm from './customHooks'
 import { Redirect } from 'react-router'
 import React, { useState, useEffect } from 'react'
+import { FormField, Button, Form, TextInput } from 'grommet'
 
-function Form(props) {
+function GameForm(props) {
   const [form, setForm] = useState({})
 
   const { inputs, handleInputChange, handleSubmit } = useForm(setForm)
@@ -12,26 +13,49 @@ function Form(props) {
   const excerpt = props.game.data.gameExcerpt
   const wordTypeArr = objArr(wordTypes)
 
+  const reload = () => {
+    window.location.reload(false)
+  }
+
   if (!Object.keys(form).length) {
     return (
-      <div>
-        <form noValidate autoComplete="off" onSubmit={handleSubmit}>
+      <div id="form">
+        <Form validate="submit" onSubmit={handleSubmit}>
           {wordTypeArr.map((e, idx) => {
             return (
-              <TextField
-                key={idx}
-                label={e}
-                name={e + idx}
-                variant="outlined"
-                value={inputs.e}
-                onChange={handleInputChange}
-              />
+              <FormField key={idx} label={e} className="formField">
+                <TextInput
+                  placeholder="your word here!"
+                  name={e + idx}
+                  value={inputs.e}
+                  onChange={handleInputChange}
+                />
+              </FormField>
             )
           })}
-          <Button variant="contained" type="submit">
-            See Results!
-          </Button>
-        </form>
+          <div id="buttons">
+            <div>
+              <Button
+                className="button"
+                primary
+                color="#ECBDBD"
+                type="submit"
+                label="Done!"
+              />
+            </div>
+            <div id="spacebetweenbuttons"></div>
+            <div>
+              <Button
+                className="button"
+                primary
+                color="#ECBDBD"
+                onClick={reload}
+                label="I want other words!"
+              />
+            </div>
+          </div>
+        </Form>
+        <div id="invisible"></div>
       </div>
     )
   } else {
@@ -47,7 +71,7 @@ function Form(props) {
   }
 }
 
-export default Form
+export default GameForm
 
 //helper
 const objArr = obj => {
