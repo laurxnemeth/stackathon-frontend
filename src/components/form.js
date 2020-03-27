@@ -23,36 +23,34 @@ function GameForm(props) {
         <Form validate="submit" onSubmit={handleSubmit}>
           {wordTypeArr.map((e, idx) => {
             return (
-              <FormField
-                key={idx}
-                label={e}
-                name={e + idx}
-                value={inputs.e}
-                onChange={handleInputChange}
-                required={true}
-                className="formField"
-              >
-                <TextInput placeholder="your word here!" />
+              <FormField key={idx} label={e} className="formField">
+                <TextInput
+                  placeholder="your word here!"
+                  name={e + idx}
+                  value={inputs.e}
+                  onChange={handleInputChange}
+                />
               </FormField>
             )
           })}
           <div id="buttons">
             <div>
               <Button
+                className="button"
                 primary
                 color="#ECBDBD"
                 type="submit"
                 label="Done!"
-                padding="5px"
               />
             </div>
+            <div id="spacebetweenbuttons"></div>
             <div>
               <Button
+                className="button"
                 primary
                 color="#ECBDBD"
                 onClick={reload}
                 label="I want other words!"
-                padding="5px"
               />
             </div>
           </div>
