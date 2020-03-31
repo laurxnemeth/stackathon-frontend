@@ -2,7 +2,7 @@ import React from 'react'
 import { Redirect } from 'react-router'
 import { Button } from 'grommet'
 
-function Results(props) {
+export function Results(props) {
   const excerpt = props.location.excerpt
   const form = props.location.form
 
@@ -15,7 +15,7 @@ function Results(props) {
   } else {
     return (
       <div>
-        <p id="result">{result(form, excerpt)}</p>
+        <p id="result">{newExcerpt(form, excerpt)}</p>
         <Button
           className="button"
           primary
@@ -28,20 +28,19 @@ function Results(props) {
   }
 }
 
-export default Results
-
 //helpers
-const result = (obj, str) => {
+export const newExcerpt = (obj, str) => {
   const arr = str.split(/ |\n/)
-  const regex = /[A-Z].*[A-Z]/
-  console.log('ARR:', arr)
+  const regex = /{[A-Z].*[A-Z]}/
   for (let i = 0; i < arr.length; i++) {
     if (regex.test(arr[i])) {
+      let substring = arr[i].substring(1, arr[i].length - 1)
       for (let key in obj) {
-        const noSpaces = key.replace(' ', '')
-        if (noSpaces.toUpperCase().includes(arr[i]) && obj[key] !== '') {
+        const noSpacesKey = key.replace(' ', '')
+        if (noSpacesKey.toUpperCase().includes(substring) && obj[key] !== '') {
           arr[i] = obj[key].toUpperCase()
           obj[key] = ''
+          break
         }
       }
     }
