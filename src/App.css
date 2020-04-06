@@ -225,6 +225,9 @@ form {
     height: 20vh;
     width: 90vw;
   }
+  #me {
+    margin: 20px;
+  }
 }
 
 /* DESKTOP VIEW */
