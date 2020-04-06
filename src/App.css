@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
 
 * {
-  background-color: #efede1;
+  background-color: #fbfaf8;
   font-family: 'Merriweather', serif;
   color: #454042;
 }
@@ -102,15 +102,6 @@ form {
   height: auto;
 }
 
-/* PHONE VIEW */
-@media only screen and (max-width: 600px) {
-  #startgame {
-    display: flex;
-    height: 20vh;
-    width: 90vw;
-  }
-}
-
 /* ABOUT */
 #about {
   padding: 20px;
@@ -122,10 +113,28 @@ form {
   text-decoration-color: #ecbdbd;
 }
 
-@media only screen and (min-width: 601px) {
-  #about p {
-    width: 80vw;
-  }
+.questions {
+  padding: 10px;
+}
+
+/* THE DEV */
+#me {
+  width: 60vw;
+  border: 10px;
+  border-style: double;
+  border-color: #ecbdbd;
+  padding: 20px;
+  -webkit-box-shadow: -2px 2px 21px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -2px 2px 21px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: -2px 2px 21px 0px rgba(0, 0, 0, 0.75);
+}
+
+#selfie {
+  height: 200px;
+  border: 2px;
+  border-color: #ecbdbd;
+  border-radius: 50%;
+  width: auto;
 }
 
 /* LOADER from https://loading.io/css/ */
@@ -206,5 +215,21 @@ form {
   }
   100% {
     opacity: 0;
+  }
+}
+
+/* PHONE VIEW */
+@media only screen and (max-width: 600px) {
+  #startgame {
+    display: flex;
+    height: 20vh;
+    width: 90vw;
+  }
+}
+
+/* DESKTOP VIEW */
+@media only screen and (min-width: 601px) {
+  #about p {
+    width: 80vw;
   }
 }

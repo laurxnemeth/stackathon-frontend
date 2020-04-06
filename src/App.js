@@ -9,11 +9,11 @@ import './App.css'
 const myTheme = {
   global: {
     colors: {
-      border: '#efede1',
+      border: '#fbfaf8',
     },
     focus: {
       border: {
-        color: '#efede1',
+        color: '#fbfaf8',
       },
     },
   },
