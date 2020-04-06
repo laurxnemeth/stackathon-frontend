@@ -28,6 +28,8 @@ function GameForm(props) {
                   name={e + idx}
                   value={inputs.e}
                   onChange={handleInputChange}
+                  focusIndicator="false"
+                  plain="false"
                   required
                 />
               </FormField>

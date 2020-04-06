@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { BrowserRouter as Router, Link } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 import start from '../startGame.png'
 
 function Home(props) {

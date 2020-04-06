@@ -1,17 +1,36 @@
 import React, { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
 import Routes from './routes'
-import { Home } from './components'
+import { Navbar } from './components'
 import { Grommet } from 'grommet'
 // eslint-disable-next-line
 import './App.css'
 
+const myTheme = {
+  global: {
+    colors: {
+      border: '#efede1',
+    },
+    focus: {
+      border: {
+        color: '#efede1',
+      },
+    },
+  },
+  button: {
+    color: '#383838',
+  },
+}
+
 function App(props) {
   return (
-    <div className="App">
-      <Grommet>
-        <Routes />
-      </Grommet>
+    <div>
+      <Navbar id="navbar" />
+      <div className="App">
+        <Grommet theme={myTheme}>
+          <Routes />
+        </Grommet>
+      </div>
     </div>
   )
 }
