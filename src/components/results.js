@@ -37,7 +37,14 @@ export const newExcerpt = (obj, str) => {
       let substring = arr[i].substring(1, arr[i].length - 1)
       for (let key in obj) {
         const noSpacesKey = key.replace(' ', '')
-        if (noSpacesKey.toUpperCase().includes(substring) && obj[key] !== '') {
+        if (noSpacesKey.toUpperCase().includes('adverb') && obj[key] !== '') {
+          arr[i] = obj[key].toUpperCase()
+          obj[key] = ''
+          break
+        } else if (
+          noSpacesKey.toUpperCase().includes(substring) &&
+          obj[key] !== ''
+        ) {
           arr[i] = obj[key].toUpperCase()
           obj[key] = ''
           break
