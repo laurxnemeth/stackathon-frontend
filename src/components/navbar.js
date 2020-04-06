@@ -12,7 +12,7 @@ const Navbar = () => {
           <a href="/about">
             <ListItem>What?</ListItem>
           </a>
-          <a href="/contact">
+          <a href="/thedeveloper">
             <ListItem>Who?</ListItem>
           </a>
         </List>
@@ -35,6 +35,7 @@ const List = styled.ul`
   display: flex;
   justify-content: space-around;
   background: #ecbdbd;
+  padding: 0px;
 `
 
 const Navigation = styled.nav`
