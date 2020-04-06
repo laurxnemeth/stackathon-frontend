@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div>
+    <div id="about">
       <h1>Where am I?</h1>
       <p>Hello! And welcome to Wordy! </p>
       <h3>What is this?</h3>
@@ -18,8 +18,9 @@ const About = () => {
         This is a personal project started in the Grace Hopper Program at
         Fullstack Academy. There were only two constraints: try out new tech,
         and attempt to have a prototype done by three days. The new tech I
-        experimented with were: Koa.js, React hooks, and the Merriam Webster
-        API. It was fun, so I decided to pursue it after graduation!
+        experimented with were: Koa.js, React hooks, and the Merriam-Webster's
+        Collegiate® Dictionary API. It was fun, so I decided to keep pursuing it
+        after graduation!
       </p>
       <h3>What book are these paragraphs from?</h3>
       <p>
