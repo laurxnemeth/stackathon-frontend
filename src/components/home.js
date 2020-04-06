@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import { BrowserRouter as Router } from 'react-router-dom'
 import start from '../startGame.png'
+import merriamWebster from '../merriam-webster.png'
 
 function Home(props) {
   return (
-    <div className="home">
-      <Router>
+    <div id="homepage">
+      <div className="home">
         <a href="/game">
           <img
             src={start}
@@ -14,7 +14,11 @@ function Home(props) {
             id="startgame"
           />
         </a>
-      </Router>
+      </div>
+      <div id="merriam">
+        <h5>Built using</h5>
+        <img src={merriamWebster} alt="merriam-webster logo" />
+      </div>
     </div>
   )
 }

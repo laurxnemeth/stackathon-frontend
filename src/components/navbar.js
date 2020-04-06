@@ -7,7 +7,7 @@ const Navbar = () => {
       <Navigation role="navigation">
         <List class="menu">
           <a href="/home">
-            <ListItem>Home?</ListItem>
+            <ListItem>Play?</ListItem>
           </a>
           <a href="/about">
             <ListItem>What?</ListItem>
@@ -33,7 +33,7 @@ const Wrapper = styled.div`
 
 const List = styled.ul`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   background: #ecbdbd;
 `
 
