@@ -3,21 +3,45 @@
 * {
   background-color: #efede1;
   font-family: 'Merriweather', serif;
+  color: #454042;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #454042;
+}
+
+a:hover {
+  text-decoration: none;
+  font-weight: bolder;
+  color: #454042;
+}
+
+a:active {
+  text-decoration: none;
+  font-weight: bolder;
+  color: #454042;
 }
 
 .App {
   text-align: center;
   display: flex;
-  min-height: 100vh;
+  min-height: 90vh;
   align-items: center;
   justify-content: center;
 }
 
 /* HOMEPAGE */
-.home {
+#homepage {
+  min-height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 #startgame {
@@ -26,6 +50,20 @@
   width: auto;
   border-radius: 25px;
   box-shadow: 0px 0px 20px -6px rgba(54, 43, 54, 1);
+}
+
+#merriam {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+}
+
+#merriam img {
+  height: 50px;
+  width: 50px;
+  padding: 10px;
 }
 
 /* FORM */
@@ -70,6 +108,23 @@ form {
     display: flex;
     height: 20vh;
     width: 90vw;
+  }
+}
+
+/* ABOUT */
+#about {
+  padding: 20px;
+}
+
+#about a {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: #ecbdbd;
+}
+
+@media only screen and (min-width: 601px) {
+  #about p {
+    width: 80vw;
   }
 }
 
