@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { GameForm } from '../components'
-import { CircularProgress } from '@material-ui/core'
 
 const SERVER_PATH = 'http://localhost:2020'
 
@@ -17,7 +16,26 @@ function Game(props) {
   }, [])
 
   return (
-    <div>{game.data ? <GameForm game={game} /> : <CircularProgress />}</div>
+    <div>
+      {game.data ? (
+        <GameForm game={game} />
+      ) : (
+        <div className="lds-spinner">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      )}
+    </div>
   )
 }
 

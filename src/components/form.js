@@ -1,4 +1,3 @@
-//import { TextField, Button } from '@material-ui/core'
 import useForm from './customHooks'
 import { Redirect } from 'react-router'
 import React, { useState, useEffect } from 'react'
@@ -29,6 +28,9 @@ function GameForm(props) {
                   name={e + idx}
                   value={inputs.e}
                   onChange={handleInputChange}
+                  focusIndicator="false"
+                  plain="false"
+                  required
                 />
               </FormField>
             )
