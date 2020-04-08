@@ -5,15 +5,17 @@ const Navbar = () => {
   return (
     <Wrapper>
       <Navigation role="navigation">
-        <List class="menu">
+        <List className="menu" id="nav">
           <a href="/home">
-            <ListItem>Play?</ListItem>
+            <ListItem>play game</ListItem>
           </a>
+          <Span></Span>
           <a href="/about">
-            <ListItem>What?</ListItem>
+            <ListItem>FAQ</ListItem>
           </a>
+          <Span></Span>
           <a href="/thedeveloper">
-            <ListItem>Who?</ListItem>
+            <ListItem>the developer</ListItem>
           </a>
         </List>
       </Navigation>
@@ -28,18 +30,19 @@ const Wrapper = styled.div`
   background: #ecbdbd;
   height: max-content;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
-  padding: 1vh 5vw 1vh 5vw;
+  padding: 1vh 3vw 1vh 5vw;
 `
 
 const List = styled.ul`
   display: flex;
-  justify-content: space-around;
   background: #ecbdbd;
   padding: 0px;
+  align-items: center;
+  justify-content: space-between;
+  width: 30vw;
 `
 
 const Navigation = styled.nav`
-  width: 100vw;
   background: #ecbdbd;
 `
 
@@ -48,4 +51,11 @@ const ListItem = styled.li`
   list-style-type: none;
   margin: 0;
   padding: 0;
+`
+
+const Span = styled.span`
+  height: 10px;
+  width: 10px;
+  background-color: #fbfaf8;
+  border-radius: 50%;
 `

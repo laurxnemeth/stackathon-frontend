@@ -13,7 +13,7 @@ const myTheme = {
     },
     focus: {
       border: {
-        color: '#fbfaf8',
+        color: '#ecbdbd',
       },
     },
   },

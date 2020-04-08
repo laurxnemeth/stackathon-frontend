@@ -137,6 +137,17 @@ form {
   width: auto;
 }
 
+#allSocials {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.socialMedia {
+  height: 50px;
+  width: auto;
+}
+
 /* LOADER from https://loading.io/css/ */
 
 .lds-spinner {
@@ -227,6 +238,9 @@ form {
   }
   #me {
     margin: 20px;
+  }
+  #nav {
+    width: 90vw;
   }
 }
 

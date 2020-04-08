@@ -38,7 +38,8 @@ const About = () => {
         <h3>What's the tech?</h3>
         <p>
           This was written in Javascript, and developed using React, Koa.js,
-          PostgreSQL, the Merriam Webster API. You can find all of the code{' '}
+          PostgreSQL, and the Merriam-Webster's Collegiate® Dictionary API. You
+          can find all of the code{' '}
           <a href="https://github.com/laurxnemeth/stackathon-frontend">here</a>{' '}
           and{' '}
           <a href="https://github.com/laurxnemeth/stackathon-backend">here</a>.
