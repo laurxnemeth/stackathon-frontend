@@ -5,7 +5,7 @@ import { links } from '../links'
 const Me = () => {
   return (
     <div id="me">
-      <img src={thedev} alt="image of laura nemeth" id="selfie" />
+      <img src={thedev} alt="a selfie of laura nemeth" id="selfie" />
       <p>
         {' '}
         I’m Laura Nemeth, your friendly neighborhood developer! Other than
@@ -15,13 +15,22 @@ const Me = () => {
         this website, and consider getting a library card from your local
         branch!
       </p>
-      {links.map((link, idx) => {
-        return (
-          <div id={idx}>
-            <img src={link.img} alt={link.name} />
-          </div>
-        )
-      })}
+      <div id="allSocials">
+        {links.map((link, idx) => {
+          return (
+            <div id={idx}>
+              <a href={link.link}>
+                {' '}
+                <img
+                  src={link.img}
+                  alt={link.name}
+                  className="socialMedia"
+                />{' '}
+              </a>
+            </div>
+          )
+        })}
+      </div>
     </div>
   )
 }

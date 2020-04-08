@@ -1,17 +1,21 @@
+import github from './socialMedia/github.png'
+import linkedin from './socialMedia/linkedin.png'
+import twitter from './socialMedia/twitter.png'
+
 export const links = [
   {
-    name: 'github link',
-    link: 'www.github.com/laurxnemeth',
-    img: '../socialMedia/github.png',
+    name: 'github',
+    link: 'https://www.github.com/laurxnemeth',
+    img: github,
   },
   {
-    name: 'linkedin link',
-    link: 'www.linkedin.com/in/laurxnemeth',
-    img: '../socialMedia/linkedin.png',
+    name: 'linkedin',
+    link: 'https://www.linkedin.com/in/laurxnemeth',
+    img: linkedin,
   },
   {
-    name: 'twitter link',
-    link: 'www.twitter.com/laurxnemeth',
-    img: '../socialMedia/twitter.png',
+    name: 'twitter',
+    link: 'https://www.twitter.com/laurxnemeth',
+    img: twitter,
   },
 ]
