@@ -1,7 +1,6 @@
 import useForm from './customHooks'
 import { Redirect } from 'react-router'
 import React, { useState, useEffect } from 'react'
-import { FormField, Button, Form, TextInput } from 'grommet'
 
 function GameForm(props) {
   const [form, setForm] = useState({})
@@ -19,44 +18,34 @@ function GameForm(props) {
   if (!Object.keys(form).length) {
     return (
       <div id="form">
-        <Form validate="submit" onSubmit={handleSubmit}>
-          {wordTypeArr.map((e, idx) => {
-            return (
-              <FormField key={idx} label={e} className="formField">
-                <TextInput
-                  placeholder="your word here!"
-                  name={e + idx}
-                  value={inputs.e}
-                  onChange={handleInputChange}
-                  focusIndicator="false"
-                  plain="false"
-                  required
-                />
-              </FormField>
-            )
-          })}
+        <form onSubmit={handleSubmit}>
+          <div id="words">
+            {wordTypeArr.map((e, idx) => {
+              return (
+                <label key={idx} className="formField">
+                  {e}
+                  <input
+                    placeholder="your word here!"
+                    name={e + idx}
+                    value={inputs.e}
+                    onChange={handleInputChange}
+                  />
+                </label>
+              )
+            })}
+          </div>
           <div id="buttons">
             <div>
-              <Button
-                className="button"
-                primary
-                color="#ECBDBD"
-                type="submit"
-                label="Done!"
-              />
+              <button type="submit" value="submit">
+                Done!
+              </button>
             </div>
             <div id="spacebetweenbuttons"></div>
             <div>
-              <Button
-                className="button"
-                primary
-                color="#ECBDBD"
-                onClick={reload}
-                label="I want other words!"
-              />
+              <button onClick={reload}>I want other words!</button>
             </div>
           </div>
-        </Form>
+        </form>
         <div id="invisible"></div>
       </div>
     )

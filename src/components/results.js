@@ -1,6 +1,5 @@
 import React from 'react'
 import { Redirect } from 'react-router'
-import { Button } from 'grommet'
 
 export function Results(props) {
   const excerpt = props.location.excerpt
@@ -16,13 +15,7 @@ export function Results(props) {
     return (
       <div>
         <p id="result">{newExcerpt(form, excerpt)}</p>
-        <Button
-          className="button"
-          primary
-          color="#ECBDBD"
-          onClick={reload}
-          label="Play again?"
-        />
+        <button onClick={reload}>Play again?</button>
       </div>
     )
   }
