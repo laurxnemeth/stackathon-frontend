@@ -35,6 +35,43 @@ a:active {
   justify-content: center;
 }
 
+/* NAVBAR */
+#navbar {
+  display: flex;
+  background: #ecbdbd;
+  height: max-content;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
+  padding: 1vh 3vw 1vh 5vw;
+}
+
+nav {
+  background: #ecbdbd;
+}
+
+#navlist {
+  display: flex;
+  background: #ecbdbd;
+  padding: 0px;
+  align-items: center;
+  justify-content: space-between;
+  width: 30vw;
+}
+
+#navlist li {
+  background: #ecbdbd;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-shadow: 3px 3px 5px rgba(214, 171, 171, 0.91);
+}
+
+#navlist span {
+  height: 10px;
+  width: 10px;
+  background-color: #fbfaf8;
+  border-radius: 50%;
+}
+
 /* HOMEPAGE */
 #homepage {
   min-height: 90vh;
@@ -72,26 +109,80 @@ form {
   display: flex;
   height: 85vh;
   width: 85vw;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#words {
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  padding: 20px;
 }
 
 .formField {
+  display: flex;
+  flex-direction: column;
   padding: 10px;
 }
 
 #buttons {
   display: flex;
-  bottom: 3%;
-  right: center;
   flex-direction: column;
   height: 15vh;
+  padding-bottom: 20px;
+}
+
+button {
+  box-shadow: inset 0px 1px 0px 0px #e6d4d4;
+  background: linear-gradient(to bottom, #f0d8d8 5%, #ecbdbd 100%);
+  background-color: #f0d8d8;
+  border-radius: 6px;
+  border: 1px solid #ecbdbd;
+  display: inline-block;
+  cursor: pointer;
+  color: #fbfaf8;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #eb9f9f;
+}
+button:focus {
+  outline: none;
+}
+button:hover {
+  background: linear-gradient(to bottom, #ecbdbd 5%, #f0d8d8 100%);
+  background-color: #ecbdbd;
+}
+button:active {
+  position: relative;
+  top: 1px;
 }
 
 #spacebetweenbuttons {
-  height: 20px;
+  height: 10px;
+}
+
+label {
+  font-size: larger;
+}
+
+input {
+  border: none;
+  border-bottom: 4px dotted #ecbdbd;
+  height: 5vh;
+  font-size: 18px;
+  width: 15vw;
+  padding: 10px;
+  outline: none;
+}
+
+input:focus {
+  border: none;
+  border-bottom: 4px solid #ecbdbd;
 }
 
 /* RESULT */
@@ -242,11 +333,18 @@ form {
   #nav {
     width: 90vw;
   }
+  input {
+    width: 50vw;
+    font-size: 3vh;
+  }
 }
 
 /* DESKTOP VIEW */
 @media only screen and (min-width: 601px) {
   #about p {
     width: 80vw;
+  }
+  form {
+    justify-content: center;
   }
 }

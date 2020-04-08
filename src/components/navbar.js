@@ -1,61 +1,25 @@
 import React from 'react'
-import styled from 'styled-components'
 
 const Navbar = () => {
   return (
-    <Wrapper>
-      <Navigation role="navigation">
-        <List className="menu" id="nav">
+    <div id="navbar">
+      <nav role="navigation">
+        <ul className="menu" id="navlist">
           <a href="/home">
-            <ListItem>play game</ListItem>
+            <li>play game</li>
           </a>
-          <Span></Span>
+          <span></span>
           <a href="/about">
-            <ListItem>FAQ</ListItem>
+            <li>FAQ</li>
           </a>
-          <Span></Span>
+          <span></span>
           <a href="/thedeveloper">
-            <ListItem>the developer</ListItem>
+            <li>the developer</li>
           </a>
-        </List>
-      </Navigation>
-    </Wrapper>
+        </ul>
+      </nav>
+    </div>
   )
 }
 
 export default Navbar
-
-const Wrapper = styled.div`
-  display: flex;
-  background: #ecbdbd;
-  height: max-content;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
-  padding: 1vh 3vw 1vh 5vw;
-`
-
-const List = styled.ul`
-  display: flex;
-  background: #ecbdbd;
-  padding: 0px;
-  align-items: center;
-  justify-content: space-between;
-  width: 30vw;
-`
-
-const Navigation = styled.nav`
-  background: #ecbdbd;
-`
-
-const ListItem = styled.li`
-  background: #ecbdbd;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-`
-
-const Span = styled.span`
-  height: 10px;
-  width: 10px;
-  background-color: #fbfaf8;
-  border-radius: 50%;
-`
