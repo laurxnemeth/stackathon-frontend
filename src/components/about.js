@@ -7,7 +7,7 @@ const About = () => {
       <div className="questions">
         <h3>What is this?</h3>
         <p>
-          This is a ‘madlibs’ style game where you are prompted with a random
+          This is a ‘Mad Libs™’ style game where you are prompted with a random
           assortment of words to be filled out, specified by their role in parts
           of speech (a.k.a. verb, noun, adverb, etc). Then, a paragraph appears
           with your words inserted for you! You might make a funny paragraph, a
