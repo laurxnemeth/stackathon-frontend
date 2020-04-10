@@ -6,15 +6,15 @@ const Navbar = () => {
       <nav role="navigation">
         <ul className="menu" id="navlist">
           <a href="/home">
-            <li>play game</li>
+            <li>PLAY.</li>
           </a>
           <span></span>
           <a href="/about">
-            <li>FAQ</li>
+            <li>FAQ.</li>
           </a>
           <span></span>
           <a href="/thedeveloper">
-            <li>the developer</li>
+            <li>MEET ME.</li>
           </a>
         </ul>
       </nav>
