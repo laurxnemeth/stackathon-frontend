@@ -5,4 +5,4 @@ This is a personal project started in the Grace Hopper Program at Fullstack Acad
 
 Developed with Node.js, Koa.js, and Sequelize. Accesses the Merriam Webster API.
 
-Soon to go live!
+**Soon to go live!**
