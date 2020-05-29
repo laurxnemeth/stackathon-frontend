@@ -1,19 +1,19 @@
-import useForm from './customHooks'
-import { Redirect } from 'react-router'
-import React, { useState, useEffect } from 'react'
+import useForm from './customHooks';
+import { Redirect } from 'react-router';
+import React, { useState, useEffect } from 'react';
 
 function GameForm(props) {
-  const [form, setForm] = useState({})
+  const [form, setForm] = useState({});
 
-  const { inputs, handleInputChange, handleSubmit } = useForm(setForm)
+  const { inputs, handleInputChange, handleSubmit } = useForm(setForm);
 
-  const wordTypes = props.game.data.wordTypes
-  const excerpt = props.game.data.gameExcerpt
-  const wordTypeArr = objArr(wordTypes)
+  const wordTypes = props.game.data.wordTypes;
+  const excerpt = props.game.data.gameExcerpt;
+  const wordTypeArr = objArr(wordTypes);
 
   const reload = () => {
-    window.location.reload(false)
-  }
+    window.location.reload(false);
+  };
 
   if (!Object.keys(form).length) {
     return (
@@ -31,7 +31,7 @@ function GameForm(props) {
                     onChange={handleInputChange}
                   />
                 </label>
-              )
+              );
             })}
           </div>
           <div id="buttons">
@@ -48,7 +48,7 @@ function GameForm(props) {
         </form>
         <div id="invisible"></div>
       </div>
-    )
+    );
   } else {
     return (
       <Redirect
@@ -58,19 +58,19 @@ function GameForm(props) {
           excerpt: excerpt,
         }}
       />
-    )
+    );
   }
 }
 
-export default GameForm
+export default GameForm;
 
 //helper
-const objArr = obj => {
-  let arr = []
+const objArr = (obj) => {
+  let arr = [];
   for (let key in obj) {
     for (let i = 0; i < obj[key]; i++) {
-      arr.push(key)
+      arr.push(key);
     }
   }
-  return arr
-}
+  return arr;
+};

@@ -1,6 +1,6 @@
-import React from 'react'
-import thedev from '../developer.png'
-import { links } from '../links'
+import React from 'react';
+import thedev from '../developer.png';
+import { links } from '../links';
 
 const Me = () => {
   return (
@@ -28,11 +28,11 @@ const Me = () => {
                 />{' '}
               </a>
             </div>
-          )
+          );
         })}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Me
+export default Me;

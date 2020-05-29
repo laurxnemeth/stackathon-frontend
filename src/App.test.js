@@ -1,7 +1,7 @@
-import React from 'react'
-import { render } from '@testing-library/react'
-import App from './App'
-import { newExcerpt } from './components/results'
+import React from 'react';
+import { render } from '@testing-library/react';
+import App from './App';
+import { newExcerpt } from './components/results';
 
 // test('renders start game link', () => {
 //   const { getByTestId } = render(<App />)
@@ -20,12 +20,12 @@ describe('Helper functions', () => {
       verb0: 'jump',
       verb1: 'cried',
       'geographical name2': 'Jeremy',
-    }
+    };
     const excerpt =
-      'Mrs. {NOUN} was herself again directly, {VERB} the {NOUN} over, and stretched out her arms to her daughters, saying, in a {NOUN} they never forgot, I shall go at once, but it may be too late. Oh, children, children, help me to bear it! For several {NOUN} there was nothing but the {NOUN} of {VERB} in the {GEOGRAPHICALNAME}'
+      'Mrs. {NOUN} was herself again directly, {VERB} the {NOUN} over, and stretched out her arms to her daughters, saying, in a {NOUN} they never forgot, I shall go at once, but it may be too late. Oh, children, children, help me to bear it! For several {NOUN} there was nothing but the {NOUN} of {VERB} in the {GEOGRAPHICALNAME}';
     const output =
-      'Mrs. COFFEE was herself again directly, JUMP the CAT over, and stretched out her arms to her daughters, saying, in a WATER they never forgot, I shall go at once, but it may be too late. Oh, children, children, help me to bear it! For several LYSOL there was nothing but the CORONAVIRUS of CRIED in the JEREMY'
+      'Mrs. COFFEE was herself again directly, JUMP the CAT over, and stretched out her arms to her daughters, saying, in a WATER they never forgot, I shall go at once, but it may be too late. Oh, children, children, help me to bear it! For several LYSOL there was nothing but the CORONAVIRUS of CRIED in the JEREMY';
 
-    expect(newExcerpt(input, excerpt)).toEqual(output)
-  })
-})
+    expect(newExcerpt(input, excerpt)).toEqual(output);
+  });
+});

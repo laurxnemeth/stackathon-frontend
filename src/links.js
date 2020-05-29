@@ -1,6 +1,6 @@
-import github from './socialMedia/github.png'
-import linkedin from './socialMedia/linkedin.png'
-import twitter from './socialMedia/twitter.png'
+import github from './socialMedia/github.png';
+import linkedin from './socialMedia/linkedin.png';
+import twitter from './socialMedia/twitter.png';
 
 export const links = [
   {
@@ -18,4 +18,4 @@ export const links = [
     link: 'https://www.twitter.com/laurxnemeth',
     img: twitter,
   },
-]
+];

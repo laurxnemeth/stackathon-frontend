@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const About = () => {
   return (
@@ -7,11 +7,13 @@ const About = () => {
       <div className="questions">
         <h3>What is this?</h3>
         <p>
-          This is a ‘Mad Libs™’ style game where you are prompted with a random
-          assortment of words to be filled out, specified by their role in parts
-          of speech (a.k.a. verb, noun, adverb, etc). Then, a paragraph appears
-          with your words inserted for you! You might make a funny paragraph, a
-          weird paragraph, it all depends on what you write!
+          A “Madlibs” generator in which a random excerpt of a book is
+          transformed into a phrasal template game. Or in other words: a game
+          where you are prompted with a random assortment of words to be filled
+          out, specified by their role in parts of speech (a.k.a. verb, noun,
+          adverb, etc). Then, a paragraph appears with your words inserted for
+          you! You might make a funny paragraph, a weird paragraph, it all
+          depends on what you write!
         </p>
       </div>
       <div className="questions">
@@ -55,6 +57,6 @@ const About = () => {
         </p>
       </div>
     </div>
-  )
-}
-export default About
+  );
+};
+export default About;

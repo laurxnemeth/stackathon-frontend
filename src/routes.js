@@ -1,6 +1,6 @@
-import React from 'react'
-import { Game, Home, Results, About, Me } from './components'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import React from 'react';
+import { Game, Home, Results, About, Me } from './components';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 export default function Routes() {
   return (
@@ -13,5 +13,5 @@ export default function Routes() {
         <Route path="/thedeveloper" component={Me} />
       </Switch>
     </Router>
-  )
+  );
 }

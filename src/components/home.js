@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
-import start from '../startGame.png'
-import merriamWebster from '../merriam-webster.png'
+import React, { useState, useEffect } from 'react';
+import start from '../startGame.png';
+import merriamWebster from '../merriam-webster.png';
 
 function Home(props) {
   return (
@@ -20,7 +20,7 @@ function Home(props) {
         <img src={merriamWebster} alt="merriam-webster logo" />
       </div>
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
