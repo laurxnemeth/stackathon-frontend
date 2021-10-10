@@ -26,16 +26,12 @@
     ]
   },
   "dependencies": {
+    "@koa/cors": "^2.2.3",
     "@material-ui/core": "^4.9.7",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.19.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "^3.4.0",
-    "@koa/cors": "^2.2.3",
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
     "dotenv": "^8.2.0",
@@ -44,9 +40,13 @@
     "koa-morgan": "^1.0.1",
     "koa-router": "^8.0.6",
     "mocha": "^7.0.0",
-    "pg": "^7.17.1",
+    "pg": "^8.6.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.4.0",
     "request": "^2.88.0",
-    "sequelize": "^5.21.3",
+    "sequelize": "^5.22.4",
     "sequelize-cli": "^5.5.1"
   },
   "devDependencies": {

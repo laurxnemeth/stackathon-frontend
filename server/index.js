@@ -6,7 +6,7 @@ const logger = require('koa-morgan');
 const Router = require('koa-router');
 const bodyParser = require('koa-body')();
 const key = require('../secrets.js');
-const Excerpt = require('../db/models/excerpt');
+const Excerpt = require('./db/models/excerpt');
 const Sequelize = require('sequelize');
 const port = process.env.PORT || 2020;
 
