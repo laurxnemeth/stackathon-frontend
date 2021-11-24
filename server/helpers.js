@@ -1,5 +1,5 @@
 const axios = require('axios');
-const key = require('../secrets.js');
+const apiKey = process.env.API_KEY || "";
 
 //stopWords.txt gets turned into an object
 const getStopWords = () => {
@@ -85,7 +85,7 @@ const buildDict = async arr => {
     let wordsDict = {};
     for (let i = 0; i < arr.length; i++) {
       let response = await axios.get(
-        `https://dictionaryapi.com/api/v3/references/collegiate/json/${arr[i]}?key=${key}`,
+        `https://dictionaryapi.com/api/v3/references/collegiate/json/${arr[i]}?key=${apiKey}`,
       );
       wordsDict[arr[i]] = response.data[0].fl;
     }
