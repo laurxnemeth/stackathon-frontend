@@ -5,7 +5,7 @@ const Navbar = () => {
     <div id="navbar">
       <nav role="navigation">
         <ul className="menu" id="navlist">
-          <a href="/home">
+          <a href="/">
             <li>PLAY.</li>
           </a>
           <span></span>
