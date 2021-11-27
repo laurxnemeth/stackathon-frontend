@@ -1,0 +1,45 @@
+version: '3.8'
+
+x-default-volumes: &default-volumes
+  volumes:
+    - .:/app
+    - ./migrations:/app/migrations
+    - ./node_modules:/app/node_modules
+    - ./package.json:/app/package.json
+    - ./yarn.lock:/app/yarn.lock
+
+services:
+  dev:
+    build: .
+    command: ['yarn', 'start']
+    ports:
+      - '3000:3000'
+    stdin_open: true
+    environment:
+      BACKEND_HOST: 'http://backend:2020'
+    depends_on:
+      - backend
+    <<: *default-volumes
+
+  backend:
+    build: .
+    command:
+      - /bin/sh
+      - -c
+      - |
+        echo "sleep for 30sec"
+        sleep 30 
+        yarn seed
+        yarn startServer
+    ports:
+      - '2020:2020'
+    depends_on:
+      - db
+
+  db:
+    image: postgres:12.8
+    expose:
+      - 5432
+    environment:
+      POSTGRES_PASSWORD: test
+      POSTGRES_DB: stackathon

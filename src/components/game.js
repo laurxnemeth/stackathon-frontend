@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { GameForm } from '../components';
 
-const SERVER_PATH = 'http://localhost:2020';
+const SERVER_PATH = `${process.env.BACKEND_HOST || 'http://localhost:2020'}`;
 
 function Game(props) {
   const [game, setGame] = useState({});

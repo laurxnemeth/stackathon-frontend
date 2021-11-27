@@ -2,22 +2,13 @@
   "name": "stackathon-frontend",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@material-ui/core": "^4.9.7",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "axios": "^0.19.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "^3.4.0"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test": "npx jest",
+    "seed": "node seed.js",
+    "startServer": "nodemon server/index.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -34,7 +25,34 @@
       "last 1 safari version"
     ]
   },
+  "dependencies": {
+    "@koa/cors": "^2.2.3",
+    "@material-ui/core": "^4.9.7",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "axios": "^0.19.2",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "dotenv": "^8.2.0",
+    "koa": "^2.11.0",
+    "koa-body": "^4.1.1",
+    "koa-morgan": "^1.0.1",
+    "koa-router": "^8.0.6",
+    "mocha": "^7.0.0",
+    "pg": "^8.6.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.4.0",
+    "request": "^2.88.0",
+    "sequelize": "^5.22.4",
+    "sequelize-cli": "^5.5.1"
+  },
   "devDependencies": {
-    "prettier": "1.19.1"
+    "jest": "^25.1.0",
+    "nodemon": "^2.0.2",
+    "prettier": "1.19.1",
+    "supertest": "^4.0.2"
   }
 }
